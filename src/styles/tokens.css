@@ -1,0 +1,122 @@
+/*
+ * Design tokens (spec §6–7). Components use only these variables, so a theme is
+ * a single block below. Palette: off-white, charcoal, rose gold — no blue.
+ */
+:root {
+  color-scheme: light;
+  --font-body: 'DM Sans', 'Noto Sans Thai', sans-serif;
+  --font-heading: 'Manrope', 'Noto Sans Thai', sans-serif;
+
+  --canvas: #f8f9fb;
+  --canvas-glow: rgba(227, 184, 150, 0.12);
+  --header-bg: rgba(248, 249, 251, 0.84);
+  --header-line: rgba(213, 220, 227, 0.75);
+
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-raised: rgba(255, 255, 255, 0.86);
+  --surface-solid: #ffffff;
+  --surface-muted: #f1f1f2;
+  --modal-bg: #fbfbfc;
+  --control-bg: linear-gradient(145deg, #ffffff, #f1f2f4);
+  --control-shadow: 3px 3px 8px #dfe2e6, -3px -3px 8px #ffffff;
+  --soft-shadow: 2px 2px 5px rgba(45, 49, 57, 0.035), -2px -2px 5px #ffffff;
+  --panel-shadow: 0 10px 30px rgba(45, 49, 57, 0.035), inset 0 1px 0 #ffffff;
+  --inset-shadow: inset 1px 1px 3px rgba(45, 49, 57, 0.035), inset -1px -1px 3px #ffffff;
+
+  --ink: #2c3036;
+  --heading: #2d3139;
+  --text-soft: #5f646b;
+  --text-subtle: #737981;
+  --muted: #8c94a0;
+  --line: #e2e7ec;
+  --line-strong: #d5dce3;
+
+  --active-bg: #2d3139;
+  --active-ink: #ffffff;
+
+  --rose: #c89b7b;
+  --rose-light: #e3b896;
+  --rose-ink: #6c4f3c;
+  --rose-text: #91745f;
+  --rose-tint: #f7eee7;
+  --rose-wash: #faf6f2;
+  --rose-line: #e3c4ab;
+  --rose-line-soft: #ebddd2;
+  --symbol-bg: linear-gradient(145deg, #ffffff, #f3e8df);
+  --redflag-bg: linear-gradient(145deg, #fffaf6, #f7eee7);
+  --redflag-ink: #6d6259;
+  --redflag-heading: #765744;
+
+  --note-bg: #f4f3f1;
+  --note-line: #e9e5e0;
+  --note-ink: #77716b;
+  --urgent-bg: #fbf1e9;
+  --urgent-line: #dfbfa6;
+  --urgent-ink: #775640;
+  --urgent-strong: #9b4e3d;
+
+  --tooltip-bg: rgba(45, 49, 57, 0.9);
+  --tooltip-ink: #ffffff;
+  --hotspot-bg: rgba(255, 255, 255, 0.78);
+  --grid-line: rgba(213, 220, 227, 0.13);
+  --figure-shadow: rgba(45, 49, 57, 0.1);
+  --status-dot: #9caa9b;
+  --focus-ring: rgba(200, 155, 123, 0.45);
+  --backdrop: rgba(45, 49, 57, 0.2);
+}
+
+:root[data-theme='warm-dark'] {
+  color-scheme: dark;
+  --canvas: #292725;
+  --canvas-glow: rgba(200, 155, 123, 0.1);
+  --header-bg: rgba(41, 39, 37, 0.9);
+  --header-line: #4d4741;
+
+  --surface: rgba(53, 50, 46, 0.88);
+  --surface-raised: #3b3834;
+  --surface-solid: #34312d;
+  --surface-muted: #3b3834;
+  --modal-bg: #302d2a;
+  --control-bg: linear-gradient(145deg, #3b3834, #302d2a);
+  --control-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  --soft-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  --panel-shadow: 0 12px 30px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  --inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+  --ink: #f4efe9;
+  --heading: #f4efe9;
+  --text-soft: #ddd4cb;
+  --text-subtle: #cbc1b7;
+  --muted: #b7ada3;
+  --line: #4d4741;
+  --line-strong: #655b52;
+
+  --active-bg: #c89b7b;
+  --active-ink: #292725;
+
+  --rose-ink: #f1d3bc;
+  --rose-text: #e3b896;
+  --rose-tint: rgba(200, 155, 123, 0.2);
+  --rose-wash: rgba(200, 155, 123, 0.1);
+  --rose-line: #75685d;
+  --rose-line-soft: #5b524a;
+  --symbol-bg: linear-gradient(145deg, #46413b, #35312d);
+  --redflag-bg: linear-gradient(145deg, rgba(200, 155, 123, 0.13), rgba(200, 155, 123, 0.06));
+  --redflag-ink: #e6dbd1;
+  --redflag-heading: #f1d3bc;
+
+  --note-bg: #3b3834;
+  --note-line: #4d4741;
+  --note-ink: #ddd4cb;
+  --urgent-bg: rgba(173, 108, 88, 0.22);
+  --urgent-line: #9a6553;
+  --urgent-ink: #f1dcd3;
+  --urgent-strong: #f2b4a0;
+
+  --tooltip-bg: rgba(244, 239, 233, 0.94);
+  --tooltip-ink: #292725;
+  --hotspot-bg: rgba(53, 50, 46, 0.85);
+  --grid-line: rgba(244, 239, 233, 0.05);
+  --figure-shadow: rgba(0, 0, 0, 0.25);
+  --backdrop: rgba(0, 0, 0, 0.45);
+}

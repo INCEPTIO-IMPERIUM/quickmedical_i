@@ -1,0 +1,196 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+/* Expose the design tokens to Tailwind utilities, e.g. `bg-canvas`, `text-muted`, `font-display`. */
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-heading: var(--heading);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-rose: var(--rose);
+  --color-rose-light: var(--rose-light);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 58% 37%, var(--canvas-glow), transparent 39%), var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* Thai script needs a little more vertical room than Latin at the same size. */
+html:lang(th) body {
+  line-height: 1.6;
+}
+
+/* Wide letter-spacing breaks up Thai words, so labels drop it in Thai. */
+html:lang(th) :is(.tiny-label, .zoom-hint, .model-label, .theme-menu-heading) {
+  letter-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.accent {
+  color: var(--rose);
+}
+
+.tiny-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--panel-shadow);
+}
+
+.page {
+  max-width: 1660px;
+  margin: 0 auto;
+  padding: 14px 26px 18px;
+}
+
+.eyebrow-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 1px 2px 10px;
+}
+
+.crumb {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.crumb b {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 10px;
+  color: var(--text-subtle);
+  white-space: nowrap;
+}
+
+.status-dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: var(--status-dot);
+  box-shadow: 0 0 0 3px rgba(156, 170, 155, 0.12);
+}
+
+.status-sep {
+  color: var(--rose);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(390px, 0.88fr);
+  gap: 14px;
+  align-items: stretch;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 21px 0 0;
+  margin-top: 10px;
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.footer::before,
+.footer::after {
+  content: '';
+  height: 1px;
+  width: 38px;
+  background: var(--line-strong);
+}
+
+@media (max-width: 1120px) {
+  .dashboard {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .page {
+    padding: 12px 12px 18px;
+  }
+  .eyebrow-row {
+    margin: 0 2px 9px;
+  }
+  .dashboard {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+  .footer {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .eyebrow-row {
+    align-items: flex-start;
+  }
+  .status-pill {
+    font-size: 8px;
+    padding: 6px 8px;
+  }
+  .footer::before,
+  .footer::after {
+    width: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

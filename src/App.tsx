@@ -1,120 +1,49 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useReducer, useState } from 'react'
+import { BodyMap } from './components/BodyMap'
+import { DetailsPanel } from './components/DetailsPanel'
+import { GuideDialog, type GuideRequest } from './components/GuideDialog'
+import { Header } from './components/Header'
+import { defaultSideFor } from './data/bodyAreas'
+import { usePreferences } from './preferences/preferencesContext'
+import { explorerReducer, initialExplorerState } from './state/explorer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { t } = usePreferences()
+  const [state, dispatch] = useReducer(explorerReducer, initialExplorerState)
+  const [guide, setGuide] = useState<GuideRequest | null>(null)
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+      <Header
+        onSearchMatch={(area) => dispatch({ type: 'selectArea', area, view: defaultSideFor(area), focus: false })}
+        onOpenHelp={() => setGuide({ guide: 'help' })}
+      />
+      <main id="top" className="page">
+        <div className="eyebrow-row">
+          <div className="crumb">
+            {t('page.crumbWorkspace')}&nbsp; / &nbsp;<b>{t('page.crumbExplorer')}</b>
+          </div>
+          <div className="status-pill">
+            <span className="status-dot" aria-hidden="true" /> {t('page.status')}{' '}
+            <span className="status-sep" aria-hidden="true">
+              ·
+            </span>{' '}
+            {t('page.mode')}
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
+        <div className="dashboard" id="explore">
+          <BodyMap state={state} dispatch={dispatch} />
+          <DetailsPanel state={state} dispatch={dispatch} onOpenGuide={setGuide} />
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+        <footer className="footer">
+          <span>QuickMedical</span>
+          <span aria-hidden="true">•</span>
+          <span>{t('footer.tagline')}</span>
+          <span aria-hidden="true">•</span>
+          <span>{t('footer.disclaimer')}</span>
+        </footer>
+      </main>
+      <GuideDialog request={guide} onClose={() => setGuide(null)} />
     </>
   )
 }
