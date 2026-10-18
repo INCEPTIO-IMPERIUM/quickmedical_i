@@ -55,7 +55,7 @@
 }
 
 .brand-word {
-  font: 800 22px/1 var(--font-heading);
+  font: 700 var(--fs-display)/1 var(--font-heading);
   letter-spacing: -0.06em;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .brand-sub {
-  font-size: 11px;
+  font-size: var(--fs-small);
   color: var(--muted);
   border-left: 1px solid var(--line-strong);
   padding-left: 17px;
@@ -73,7 +73,7 @@
 }
 
 .brand-sub-line {
-  font-size: 10px;
+  font-size: var(--fs-caption);
 }
 
 .nav {
@@ -85,7 +85,7 @@
 .nav a {
   position: relative;
   padding: 8px 0;
-  font-size: 12px;
+  font-size: var(--fs-small);
   color: var(--muted);
   text-decoration: none;
   white-space: nowrap;
@@ -129,7 +129,7 @@
   background: var(--surface-raised);
   box-shadow: var(--inset-shadow);
   color: var(--ink);
-  font-size: 11px;
+  font-size: var(--fs-small);
 }
 
 .header-search input::placeholder {
@@ -146,7 +146,7 @@
   border-radius: 10px;
   background: var(--surface-solid);
   box-shadow: var(--panel-shadow);
-  font-size: 10px;
+  font-size: var(--fs-caption);
   color: var(--muted);
 }
 
@@ -178,11 +178,11 @@
   border: 2px solid var(--surface-solid);
   color: #5e5148;
   font-weight: 700;
-  font-size: 11px;
+  font-size: var(--fs-small);
 }
 
 .hello {
-  font-size: 11px;
+  font-size: var(--fs-small);
   color: var(--text-subtle);
   white-space: nowrap;
 }
@@ -212,8 +212,8 @@
 
 .theme-menu-heading {
   padding: 7px 9px 9px;
-  font-size: 10px;
-  font-weight: 800;
+  font-size: var(--fs-caption);
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -265,17 +265,17 @@
 }
 
 .theme-copy strong {
-  font-size: 11px;
+  font-size: var(--fs-small);
   font-weight: 700;
 }
 
 .theme-copy small {
-  font-size: 9px;
+  font-size: var(--fs-caption);
   color: var(--muted);
 }
 
 .theme-check {
-  font-size: 13px;
+  font-size: var(--fs-body);
   color: var(--rose);
   opacity: 0;
 }
@@ -303,8 +303,8 @@
   padding: 0 8px;
   border-radius: 999px;
   color: var(--muted);
-  font-size: 10px;
-  font-weight: 800;
+  font-size: var(--fs-caption);
+  font-weight: 700;
   letter-spacing: 0.03em;
   transition: all 0.18s;
 }
@@ -336,7 +336,7 @@
     gap: 7px;
   }
   .brand-word {
-    font-size: 20px;
+    font-size: var(--fs-display);
   }
 }
 
@@ -376,7 +376,7 @@
 
 @media (max-width: 520px) {
   .brand-word {
-    font-size: 19px;
+    font-size: var(--fs-title);
   }
   .brand-mark {
     height: 34px;

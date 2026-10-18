@@ -4,8 +4,16 @@
  */
 :root {
   color-scheme: light;
-  --font-body: 'DM Sans', 'Noto Sans Thai', sans-serif;
-  --font-heading: 'Manrope', 'Noto Sans Thai', sans-serif;
+  --font-body: 'IBM Plex Sans Thai', sans-serif;
+  --font-heading: 'IBM Plex Sans Thai', sans-serif;
+
+  /* Type scale: 14px floor, 16px body, larger steps for more important text. */
+  --fs-caption: 14px; /* labels, badges, meta, hints */
+  --fs-small: 15px; /* secondary text, buttons */
+  --fs-body: 16px; /* body copy */
+  --fs-subtitle: 18px; /* card and section titles */
+  --fs-title: 20px; /* panel headings */
+  --fs-display: 24px; /* page and dialog headings */
 
   --canvas: #f8f9fb;
   --canvas-glow: rgba(227, 184, 150, 0.12);

@@ -25,12 +25,12 @@
   align-items: center;
   gap: 6px;
   padding: 0;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   color: var(--text-subtle);
 }
 
 .back-link span {
-  font-size: 17px;
+  font-size: var(--fs-subtitle);
 }
 
 .close-button {
@@ -60,13 +60,13 @@
 
 .quick-check-heading h2 {
   margin: 4px 0 0;
-  font: 700 17px/1.2 var(--font-heading);
+  font: 700 var(--fs-subtitle)/1.2 var(--font-heading);
   letter-spacing: -0.04em;
   color: var(--heading);
 }
 
 .quick-note {
-  font-size: 9px;
+  font-size: var(--fs-caption);
   color: var(--muted);
   white-space: nowrap;
 }
@@ -81,7 +81,7 @@
 .field-title {
   display: block;
   margin-bottom: 6px;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   font-weight: 700;
   color: var(--text-soft);
 }
@@ -107,7 +107,7 @@
 
 .toggle-more {
   padding: 3px 0;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   color: var(--rose-text);
 }
 
@@ -119,7 +119,7 @@
   border-radius: 10px;
   background: var(--control-bg);
   color: var(--ink);
-  font-size: 11px;
+  font-size: var(--fs-small);
 }
 
 .form-select option {
@@ -138,7 +138,7 @@
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface-raised);
-  font-size: 10px;
+  font-size: var(--fs-caption);
   line-height: 1.25;
   color: var(--text-soft);
   white-space: nowrap;
@@ -163,7 +163,7 @@
 
 .qualifier-title {
   margin-bottom: 7px;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   font-weight: 700;
   color: var(--text-soft);
 }
@@ -184,7 +184,7 @@
 }
 
 .temperature-label {
-  font-size: 10px;
+  font-size: var(--fs-caption);
   color: var(--text-soft);
 }
 
@@ -201,12 +201,12 @@
   border-radius: 8px;
   background: var(--surface-solid);
   color: var(--ink);
-  font-size: 11px;
+  font-size: var(--fs-small);
 }
 
 .temperature-note {
   margin: 5px 0 0;
-  font-size: 9px;
+  font-size: var(--fs-caption);
   line-height: 1.4;
   color: var(--text-subtle);
 }
@@ -246,7 +246,7 @@
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--surface-raised);
-  font-size: 9px;
+  font-size: var(--fs-caption);
   color: var(--text-subtle);
 }
 
@@ -287,7 +287,7 @@
   justify-content: space-between;
   gap: 8px;
   margin-top: 9px;
-  font-size: 9px;
+  font-size: var(--fs-caption);
   color: var(--muted);
 }
 
@@ -297,7 +297,7 @@
   border-radius: 9px;
   background: var(--surface-solid);
   color: var(--text-soft);
-  font-size: 9px;
+  font-size: var(--fs-caption);
   font-weight: 700;
 }
 
@@ -343,7 +343,7 @@
 
 .symptom-title {
   margin: 0;
-  font: 800 17px/1.2 var(--font-heading);
+  font: 700 var(--fs-subtitle)/1.2 var(--font-heading);
   letter-spacing: -0.035em;
   color: var(--heading);
 }
@@ -357,13 +357,13 @@
   border-radius: 999px;
   background: var(--surface-muted);
   color: var(--text-subtle);
-  font-size: 9px;
+  font-size: var(--fs-caption);
   font-weight: 600;
 }
 
 .detail-copy {
   margin: 0;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   line-height: 1.55;
   color: var(--text-subtle);
 }
@@ -383,13 +383,13 @@
 }
 
 .summary-copy .tiny-label {
-  font-size: 8px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.13em;
 }
 
 .summary-copy p {
   margin: 3px 0;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   line-height: 1.45;
   font-weight: 600;
   color: var(--text-soft);
@@ -397,7 +397,7 @@
 
 .summary-copy > span {
   display: block;
-  font-size: 9px;
+  font-size: var(--fs-caption);
   line-height: 1.45;
   color: var(--muted);
 }
@@ -411,13 +411,13 @@
   border: 1px solid var(--note-line);
   border-radius: 10px;
   background: var(--note-bg);
-  font-size: 9px;
+  font-size: var(--fs-caption);
   line-height: 1.4;
   color: var(--note-ink);
 }
 
 .guidance-note strong {
-  font-size: 9px;
+  font-size: var(--fs-caption);
   color: var(--rose-ink);
 }
 
@@ -450,19 +450,19 @@
   align-items: center;
   gap: 8px;
   margin: 0;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   font-weight: 700;
   color: var(--heading);
 }
 
 .mini-icon {
-  font-size: 14px;
+  font-size: var(--fs-body);
   color: var(--rose);
 }
 
 .text-link {
   padding: 0;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   color: var(--rose-text);
   white-space: nowrap;
 }
@@ -478,7 +478,7 @@
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface-raised);
-  font-size: 9px;
+  font-size: var(--fs-caption);
   color: var(--text-soft);
   transition: all 0.18s;
 }
@@ -516,7 +516,7 @@
 }
 
 .warning-label {
-  font-size: 8px;
+  font-size: var(--fs-caption);
   color: var(--rose-text);
 }
 
@@ -529,7 +529,7 @@
   display: flex;
   align-items: flex-start;
   gap: 6px;
-  font-size: 9px;
+  font-size: var(--fs-caption);
   line-height: 1.35;
   color: var(--redflag-ink);
 }
@@ -544,13 +544,13 @@
   border-radius: 50%;
   background: var(--rose);
   color: #ffffff;
-  font-size: 8px;
+  font-size: var(--fs-caption);
   font-weight: 700;
 }
 
 .urgent-note {
   margin: 6px 0 0;
-  font-size: 8px;
+  font-size: var(--fs-caption);
   line-height: 1.4;
   color: var(--rose-text);
 }
@@ -563,7 +563,7 @@
 
 .medical-sources .tiny-label {
   margin-bottom: 5px;
-  font-size: 8px;
+  font-size: var(--fs-caption);
 }
 
 .source-links {
@@ -573,7 +573,7 @@
 }
 
 .source-links a {
-  font-size: 9px;
+  font-size: var(--fs-caption);
   color: var(--rose-text);
   text-decoration: none;
   white-space: nowrap;
@@ -608,14 +608,14 @@
 
 @media (max-width: 520px) {
   .quick-check-heading h2 {
-    font-size: 16px;
+    font-size: var(--fs-subtitle);
   }
   .quick-note {
-    font-size: 8px;
+    font-size: var(--fs-caption);
   }
   .choice-pill {
     padding: 6px 8px;
-    font-size: 9px;
+    font-size: var(--fs-caption);
   }
   .summary-result {
     flex-direction: column;

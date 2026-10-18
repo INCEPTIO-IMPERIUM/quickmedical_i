@@ -25,7 +25,7 @@ body {
   background: radial-gradient(ellipse at 58% 37%, var(--canvas-glow), transparent 39%), var(--canvas);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--fs-body);
   line-height: 1.45;
 }
 
@@ -58,7 +58,7 @@ button:disabled {
 }
 
 .tiny-label {
-  font-size: 10px;
+  font-size: var(--fs-caption);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -87,7 +87,7 @@ button:disabled {
 }
 
 .crumb {
-  font-size: 11px;
+  font-size: var(--fs-small);
   color: var(--muted);
 }
 
@@ -104,7 +104,7 @@ button:disabled {
   background: var(--surface);
   border-radius: 999px;
   padding: 7px 12px;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   color: var(--text-subtle);
   white-space: nowrap;
 }
@@ -135,7 +135,7 @@ button:disabled {
   gap: 12px;
   padding: 21px 0 0;
   margin-top: 10px;
-  font-size: 9px;
+  font-size: var(--fs-caption);
   color: var(--muted);
 }
 
@@ -175,7 +175,7 @@ button:disabled {
     align-items: flex-start;
   }
   .status-pill {
-    font-size: 8px;
+    font-size: var(--fs-caption);
     padding: 6px 8px;
   }
   .footer::before,

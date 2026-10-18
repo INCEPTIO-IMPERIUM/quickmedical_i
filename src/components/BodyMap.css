@@ -38,14 +38,14 @@
 
 .body-head h1 {
   margin: 5px 0 0;
-  font: 700 21px/1.2 var(--font-heading);
+  font: 700 var(--fs-display)/1.2 var(--font-heading);
   letter-spacing: -0.04em;
   color: var(--heading);
 }
 
 .body-head p {
   margin: 6px 0 0;
-  font-size: 11px;
+  font-size: var(--fs-small);
   color: var(--muted);
 }
 
@@ -64,7 +64,7 @@
   padding: 7px 12px;
   border-radius: 999px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--fs-caption);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -94,14 +94,14 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: var(--fs-caption);
   font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--muted);
 }
 
 .zoom-mark {
-  font-size: 18px;
+  font-size: var(--fs-title);
   line-height: 1;
   color: var(--rose);
 }
@@ -120,7 +120,7 @@
   border-radius: 8px;
   background: var(--control-bg);
   color: var(--heading);
-  font-size: 11px;
+  font-size: var(--fs-small);
   font-weight: 700;
   box-shadow: var(--soft-shadow);
 }
@@ -131,7 +131,7 @@
 
 .zoom-controls .zoom-focus {
   padding: 0 10px;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   font-weight: 600;
   background: var(--active-bg);
   border-color: var(--active-bg);
@@ -141,7 +141,7 @@
 .zoom-level {
   min-width: 37px;
   text-align: center;
-  font-size: 10px;
+  font-size: var(--fs-caption);
   color: var(--text-subtle);
   font-variant-numeric: tabular-nums;
 }
@@ -264,7 +264,7 @@
   left: 50%;
   z-index: 3;
   transform: translateX(-50%);
-  font-size: 9px;
+  font-size: var(--fs-caption);
   font-weight: 700;
   letter-spacing: 0.16em;
   color: var(--muted);
@@ -363,7 +363,7 @@
   border-radius: 7px;
   background: var(--tooltip-bg);
   color: var(--tooltip-ink);
-  font-size: 9px;
+  font-size: var(--fs-caption);
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -399,7 +399,7 @@
   gap: 10px;
   padding-top: 8px;
   border-top: 1px solid var(--line);
-  font-size: 10px;
+  font-size: var(--fs-caption);
   color: var(--muted);
 }
 
@@ -459,7 +459,7 @@
     justify-content: flex-end;
   }
   .zoom-hint {
-    font-size: 8px;
+    font-size: var(--fs-caption);
   }
 }
 
@@ -469,7 +469,7 @@
     align-items: flex-start;
   }
   .body-head h1 {
-    font-size: 19px;
+    font-size: var(--fs-title);
   }
   .body-panel {
     min-height: 570px;
@@ -484,7 +484,7 @@
     width: 49%;
   }
   .model-label {
-    font-size: 7px;
+    font-size: var(--fs-caption);
     letter-spacing: 0.1em;
   }
   .zoom-toolbar {
@@ -505,7 +505,7 @@
   .zoom-controls .zoom-focus {
     margin-right: auto;
     padding: 0 7px;
-    font-size: 9px;
+    font-size: var(--fs-caption);
   }
   .model-footnote {
     flex-wrap: wrap;
@@ -520,6 +520,6 @@
   .hotspot span {
     left: 19px;
     padding: 4px 6px;
-    font-size: 8px;
+    font-size: var(--fs-caption);
   }
 }

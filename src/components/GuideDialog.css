@@ -30,13 +30,13 @@
 
 .modal h2 {
   margin: 6px 0 0;
-  font: 800 22px var(--font-heading);
+  font: 700 var(--fs-display) var(--font-heading);
   color: var(--heading);
 }
 
 .modal p {
   margin: 12px 0 0;
-  font-size: 12px;
+  font-size: var(--fs-small);
   line-height: 1.75;
   color: var(--text-subtle);
 }
@@ -58,6 +58,6 @@
   border-radius: 13px;
   background: var(--rose-wash);
   color: var(--rose-ink);
-  font-size: 11px;
+  font-size: var(--fs-small);
   line-height: 1.6;
 }
