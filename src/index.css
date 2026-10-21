@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import './tokens.css';
+@import './styles/tokens.css';
 
 /* Expose the design tokens to Tailwind utilities, e.g. `bg-canvas`, `text-muted`, `font-display`. */
 @theme inline {
